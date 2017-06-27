@@ -1,6 +1,11 @@
 class Motorbike extends Vehicle {
 
-  public Motorbike(){
-    numWheels = 2;
+  public Motorbike(int numWheels) {
+    super(numWheels);
   }
+
+  public String drive() {
+    return "use handle bars";
+  }
+
 }

@@ -1,11 +1,19 @@
-class Vehicle {
-  protected int numWheels = 4;//protected lets inhereted file have acces but only inhereted files.
+abstract class Vehicle {
+  protected int numWheels;
+  //"protected" lets inhereted file have acces but only inhereted files.
 
-  public Vehicle(){
-    
+  public Vehicle(int numWheels){
+    this.numWheels = numWheels;
   }
 
   public int getNumWheels(){
     return this.numWheels;
   }
+
+  public String startEngine() {
+    return "Vrrrm!";
+  }
+
+  public abstract String drive();
+
 }
