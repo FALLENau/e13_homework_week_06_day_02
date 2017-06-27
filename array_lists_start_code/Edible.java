@@ -1,5 +1,7 @@
 public interface Edible {
 
-// public void throwUp
+  String swim();
+  String speak();
+  
 
 }
