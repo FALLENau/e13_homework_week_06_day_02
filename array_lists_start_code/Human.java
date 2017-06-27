@@ -1,3 +1,5 @@
 public class Human {
-  public String
+  public String speak() {
+    return "ahhh!";
+  }
 }

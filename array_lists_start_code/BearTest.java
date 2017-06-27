@@ -32,6 +32,7 @@ public class BearTest{
   @Test
   public void canEatHuman() {
     bear.eat(human);
+    assertEquals(1, bear.foodCount());
   }
 
   // @Test
@@ -53,6 +54,7 @@ public class BearTest{
   @Test
   public void shouldEmptyBellyAfterSleeping(){
     bear.eat(salmon);
+    bear.eat(human);
     bear.sleep();
     assertEquals(0, bear.foodCount());
   }
