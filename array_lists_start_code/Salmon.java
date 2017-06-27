@@ -3,7 +3,8 @@ public class Salmon implements Edible {
     return "glup glup swimming";
   }
 
-  public String speak() {
-    return "glup!";
+  public int nutritionValue() {
+    return 7;
   }
+
 }

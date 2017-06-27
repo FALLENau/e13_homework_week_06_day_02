@@ -1,10 +1,5 @@
 public class Chicken implements Edible {
 
-  private String cluck;
-
-  public Chicken(String name){
-    this.cluck = cluck;
-  }
 
   public String swim() {
     return "float";
@@ -18,7 +13,8 @@ public class Chicken implements Edible {
     return "cluck cluck BUGAAARG";
   }
 
-  public String getCluck(){
-    return this.cluck;
+  public int nutritionValue() {
+    return 4;
   }
+
 }

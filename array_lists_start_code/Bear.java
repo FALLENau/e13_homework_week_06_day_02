@@ -27,14 +27,24 @@ public class Bear{
  //   return foodCount() == belly.size();
  // }
 
-public Edible throwUp() {
+  public Edible throwUp() {
   if(foodCount() > 0) {
     return belly.remove(0);
   }
   return null;
 }
 
- public void sleep(){
+  public int bearTotalFat() {
+    int sum = 0;
+
+    for(Edible food : this.belly) {
+      sum += food.nutritionValue();
+    }
+
+    return sum;
+  }
+
+  public void sleep(){
    this.belly.clear();
  }
 }

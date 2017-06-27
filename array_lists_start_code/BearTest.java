@@ -42,13 +42,30 @@ public class BearTest{
 
   @Test
   public void canChickenCluck() {
-    chicken.cluck();
-    assertEquals("cluck cluck BUGAAARG", chicken.getCluck());
+    assertEquals("cluck cluck BUGAAARG", chicken.cluck());
+  }
+
+
+  @Test
+  public void canThrowUpChickenAndCluck() {
+    bear.eat(chicken);
+    Edible food = bear.throwUp();
+    Chicken chicken = (Chicken) food;
+    assertEquals("cluck cluck BUGAAARG", chicken.cluck());
+    // assertNotNull(food);
   }
 
   @Test
-  public void canACastedChickCluck() {
+  public void doesEdibleHaveNutritionValue() {
+    assertEquals(4, chicken.nutritionValue());
+  }
 
+  @Test
+  public void totalBearNutritionValue() {
+    bear.eat(chicken);
+    bear.eat(salmon);
+    bear.eat(human);
+    assertEquals(23, bear.bearTotalFat());
   }
 
   // @Test //Note:start-build stage one.
