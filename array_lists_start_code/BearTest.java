@@ -4,11 +4,13 @@ import org.junit.*;
 public class BearTest{
   Bear bear;
   Salmon salmon;
+  Human human;
 
   @Before
   public void before() {
     bear = new Bear("Baloo");
     salmon = new Salmon();
+    human = new Human();
   }
 
   @Test
@@ -25,6 +27,11 @@ public class BearTest{
   public void canEatSalmon(){
     bear.eat(salmon);
     assertEquals(1, bear.foodCount());
+  }
+
+  @Test
+  public void canEatHuman() {
+    bear.eat(human);
   }
 
   // @Test
