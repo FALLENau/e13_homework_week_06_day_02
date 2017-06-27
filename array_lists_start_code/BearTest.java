@@ -23,6 +23,12 @@ public class BearTest{
     assertEquals("Baloo", bear.getName());
   }
 
+  @Test //Note:start-build stage one.
+  public void canEatSalmon(){
+    bear.eat(salmon);
+    assertEquals(1, bear.foodCount());
+  }
+
   @Test
   public void bellyStartsEmpty(){
     assertEquals(0, bear.foodCount());
@@ -70,11 +76,6 @@ public class BearTest{
     assertEquals(23, bear.bearTotalFat());
   }
 
-  // @Test //Note:start-build stage one.
-  // public void canEatSalmon(){
-  //   bear.eat(salmon);
-  //   assertEquals(1, bear.foodCount());
-  // }
 
   // @Test
   // public void canEatHuman() {
