@@ -32,19 +32,17 @@ public class Bear{
     return belly.remove(0);
   }
   return null;
-}
+  }
 
   public int bearTotalFat() {
     int sum = 0;
-
     for(Edible food : this.belly) {
       sum += food.nutritionValue();
     }
-
     return sum;
   }
 
   public void sleep(){
-   this.belly.clear();
- }
+    this.belly.clear();
+  }
 }

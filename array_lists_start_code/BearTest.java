@@ -7,6 +7,7 @@ public class BearTest{
   Salmon salmon;
   Human human;
   Chicken chicken;
+  // Rock rock;
 
   @Before
   public void before() {
@@ -14,6 +15,7 @@ public class BearTest{
     salmon = new Salmon();
     human = new Human();
     chicken = new Chicken();
+    // rock = new Rock();
   }
 
   @Test
