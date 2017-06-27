@@ -11,4 +11,10 @@ public class VehicleTest {
     car = new Car();
     motorbike = new Motorbike();
   }
+
+  @Test
+  public void motorbikeHasTwoWheels() {
+    assertEquals(2, motorbike.getNumWheels());
+  }
+  
 }

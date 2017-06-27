@@ -1,5 +1,5 @@
 class Vehicle {
-  private int numWheels = 4;
+  protected int numWheels = 4;//protected lets inhereted file have acces but only inhereted files.
 
   public Vehicle(){
     
