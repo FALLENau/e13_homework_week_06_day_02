@@ -3,31 +3,27 @@ import java.util.ArrayList;
 public class Camera{
 
   private String name;
-  private ArrayList<Types> shelf;
+  private String noise;
+  private String resolution;
 
-  public Camera(String name){
+  public Camera(String name, String noise, String resolution){
     this.name = name;
-    this.shelf = new ArrayList<Types>();
+    this.noise = noise;
+    this.resolution = resolution;
 
   }
 
   public String getName(){
     return this.name;
   }
-//   import java.util.ArrayList;
-//
-// public class Bear{
-//
-//   private String name;
-//   private ArrayList<Edible> belly;
-//
-//   public Bear(String name){
-//     this.name = name;
-//     this.belly = new ArrayList<Edible>();
-//
-//   }
-//
-//   public String getName(){
-//     return this.name;
-//   }
+
+  public String getNoise(){
+    return this.noise;
+  }
+
+  public String getResolution(){
+    return this.resolution;
+  }
+
+
 }
