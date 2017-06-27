@@ -19,13 +19,20 @@ public class Bear{
     return this.belly.size();
   }
 
-  public void eat(Salmon salmon){
-   this.belly.add(salmon);
+  public void eat(Edible food){
+   this.belly.add(food);
  }
 
  // public boolean isBellyFull(){
  //   return foodCount() == belly.size();
  // }
+
+public Edible throwUp() {
+  if(foodCount() > 0) {
+    return belly.remove(0);
+  }
+  return null;
+}
 
  public void sleep(){
    this.belly.clear();

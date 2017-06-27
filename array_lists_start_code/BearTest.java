@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import org.junit.*;
 
 public class BearTest{
@@ -24,16 +25,23 @@ public class BearTest{
   }
 
   @Test
-  public void canEatSalmon(){
+  public void canThrowUp() {
     bear.eat(salmon);
-    assertEquals(1, bear.foodCount());
+    Edible food = bear.throwUp();
+    assertNotNull(food);
   }
 
-  @Test
-  public void canEatHuman() {
-    bear.eat(human);
-    assertEquals(1, bear.foodCount());
-  }
+  // @Test //Note:start-build stage one.
+  // public void canEatSalmon(){
+  //   bear.eat(salmon);
+  //   assertEquals(1, bear.foodCount());
+  // }
+
+  // @Test
+  // public void canEatHuman() {
+  //   bear.eat(human);
+  //   assertEquals(1, bear.foodCount());
+  // }
 
   // @Test
   // public void bellyIsFull(){
@@ -54,7 +62,6 @@ public class BearTest{
   @Test
   public void shouldEmptyBellyAfterSleeping(){
     bear.eat(salmon);
-    bear.eat(human);
     bear.sleep();
     assertEquals(0, bear.foodCount());
   }
