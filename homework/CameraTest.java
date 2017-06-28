@@ -12,7 +12,6 @@ public class CameraTest{
     photo = new Photo();
     camera1 = new Camera("E.G 1. Nikon 34T", "Noise reduction filter", "Hi-resolution");
     camera2 = new Camera("Sony ILCE5100L", "No noise reduction", "Lo-resolution");
-
   }
 
   @Test
@@ -30,9 +29,15 @@ public class CameraTest{
     assertEquals("Hi-resolution", camera1.getResolution());
   }
 
-  @Test //Note:start-build stage one.
-  public void canCamera1TakePhoto(){
+  @Test
+  public void canCamera1TakePhoto() {
     camera1.take(photo);
     assertEquals(1, camera1.photoCount());
+  }
+
+  @Test
+  public void putsCamerasOut() {
+    System.out.println(camera1.details);
+
   }
 }
