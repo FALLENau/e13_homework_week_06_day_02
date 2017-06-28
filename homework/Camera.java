@@ -38,10 +38,18 @@ public class Camera{
    this.rell.add(photo);
  }
 
- public void details() {
-   result = this.name + this.noise + this.resolution;
-   return details(result);//note: think it should be simlar to ruby but not quite.
- }
+ // public String details() {
+ //   return name + noise + resolution;
+ //  //note: this still doesn't work.
+ // }
+
+ // public String printAllCameraDetails() {
+ //   String details = "";
+ //   for (Printable camera : cameras) {
+ //     details += camera.printDetails() + "\n ";
+ //   }//note: \n adds a new line within a String.
+ //   return details;
+ // }//note: printDetails method needs to be added to both DigitalCamera and AnalogCamera classes.
 
 
 }

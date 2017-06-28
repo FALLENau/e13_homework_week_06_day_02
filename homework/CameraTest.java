@@ -4,40 +4,40 @@ import org.junit.*;
 
 public class CameraTest{
   Photo photo;
-  Camera camera1;
-  Camera camera2;
+  Camera camera;
+  // Camera camera2;
 
   @Before
   public void before() {
     photo = new Photo();
-    camera1 = new Camera("E.G 1. Nikon 34T", "Noise reduction filter", "Hi-resolution");
-    camera2 = new Camera("Sony ILCE5100L", "No noise reduction", "Lo-resolution");
-  }
+    camera = new Camera("E.G 1. Nikon 34T", "Noise reduction filter", "Hi-resolution");
+    // camera2 = new Camera("Sony ILCE5100L", "No noise reduction", "Lo-resolution");
+  }//note:camera1 is just a test camera, camera 2 should be somewere else.
 
   @Test
   public void cameraHasName() {
-    assertEquals("E.G 1. Nikon 34T", camera1.getName());
+    assertEquals("E.G 1. Nikon 34T", camera.getName());
   }
 
   @Test
   public void cameraHasNoise() {
-    assertEquals("Noise reduction filter", camera1.getNoise());
+    assertEquals("Noise reduction filter", camera.getNoise());
   }
 
   @Test
   public void cameraHasResolution() {
-    assertEquals("Hi-resolution", camera1.getResolution());
+    assertEquals("Hi-resolution", camera.getResolution());
   }
 
   @Test
   public void canCamera1TakePhoto() {
-    camera1.take(photo);
-    assertEquals(1, camera1.photoCount());
+    camera.take(photo);
+    assertEquals(1, camera.photoCount());
   }
 
-  @Test
-  public void putsCamerasOut() {
-    System.out.println(camera1.details);
-
+  // @Test
+  // public void printAllCameraDetails() {
+  //   System.out.println(str);
+  //
   }
 }
